@@ -1,0 +1,597 @@
+/*Styles for whole page*/
+
+html {
+    height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    width: 30vw;
+    min-width: 300px;
+    margin-top: 3%;
+    margin-bottom: 2%;
+}
+
+/*Styles for nav bar at top*/
+
+#nav {
+    position: sticky;
+    top: 0;
+}
+
+#menu {
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end;
+    background-color: rgb(106, 119, 124);
+    margin: 0;
+    text-align: center;
+    box-shadow: 0px 10px 5px -7px rgba(0, 0, 0, 0.58);
+}
+
+/*Styles for the list elements in nav bar*/
+
+#menu li {
+    width: 10%;
+    transition: transform 0.1s ease-in, background-color 0.2s linear;
+}
+
+#menu li:hover {
+    background-color: rgb(92, 102, 105);
+    transform: scale(1, 1.1);
+    box-shadow: 0px 10px 5px -7px rgba(0, 0, 0, 0.58);
+    text-shadow: 0 0 2px white;
+}
+
+/*Styles for links in nav bar*/
+
+#menu a {
+    display: block;
+    text-decoration: none;
+    font-size: 1.3em;
+    color: rgb(221, 221, 221);
+    padding: 4%;
+}
+
+#menu a:hover {
+    color: rgb(255, 255, 255);
+}
+
+#menu a:link {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/*Styles for hamburger menu*/
+
+#hamburgerMenu {
+    font-size: 3vw;
+    display: none;
+    text-align: center;
+    padding: 2% 0;
+    color: rgb(255, 255, 255);
+    background-color: rgb(106, 119, 124);
+}
+
+#hamburgerMenu:hover {
+    box-shadow: 0px 7px 5px -7px rgba(0, 0, 0, 0.58);
+    text-shadow: 0 0 2px white;
+}
+
+#toggle {
+    display: none;
+}
+
+/*Styles for nav on mobile devices*/
+
+@media screen and (max-width: 1000px) {
+    #nav {
+        width: 100%;
+    }
+    #hamburgerMenu {
+        display: block;
+        cursor: pointer;
+    }
+    #menu {
+        text-align: center;
+        width: 100%;
+        display: none;
+        padding: 0;
+        margin: 0;
+    }
+    #menu li {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        border-bottom: solid rgb(66, 71, 73);
+        background-color: rgb(86, 96, 100);
+    }
+    #menu li:hover {
+        width: 100%;
+        background-color: rgb(102, 111, 114);
+        transform: scale(1, 1);
+    }
+    #menu a {
+        display: block;
+        margin: 0;
+        padding: 3% 0 3%;
+        font-size: 1em;
+        width: 100%;
+    }
+
+    #aboutTitle {
+        margin: auto;
+        width: 50%;
+        text-align: left;
+        font-size: 1.8em;
+        font-weight: lighter;
+        margin-top: 10%;
+        clear: left;
+    }
+}
+
+/*Styles for home section*/
+
+#home {
+    text-align: center;
+    font-size: 1.2em;
+    color: rgb(139, 139, 139);
+}
+
+#name {
+    font-weight: lighter;
+    color: black;
+}
+
+#tagline {
+    font-style: italic;
+    font-size: 1.1em;
+    border-top: solid rgb(206, 206, 206);
+    border-bottom: solid rgb(206, 206, 206);
+    width: 30%;
+    margin: auto;
+}
+
+#portfolio {
+    text-align: center;
+    font-weight: lighter;
+    margin-bottom: 0;
+    margin-top: 10vh;
+}
+
+/*Styles  for colored words (spans)*/
+
+.coloredWord {
+    color: rgb(96, 191, 255);
+}
+
+/*Styles for project section*/
+
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+.projectDiv {
+    width: 100%;
+}
+
+.projectType {
+    color: black;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    font-weight: lighter;
+}
+
+.projectType > h2{
+    margin-top: .5%;
+    margin-bottom: .5%;
+}
+
+.projectType > hr {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 40vw;
+}
+
+.projectTitle {
+    color: black;
+    font-weight: lighter;
+}
+
+.projImg {
+    width: 30%;
+    min-width: 500px;
+    transition: box-shadow 0.25s ease-in-out;
+}
+
+iframe {
+    height: 32vh;
+}
+
+.projImg:hover {
+    box-shadow: 0px 0px 16px 6px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+/*Styles for modal in project section*/
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+}
+
+.modal-content {
+    margin: auto;
+    display: none;
+    width: 80%;
+    max-width: 850px;
+}
+
+#caption {
+    background-color: rgba(0, 0, 0, .75);
+    margin: auto;
+    display: block;
+    max-width: 700px;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    padding: 2%;
+    font-size: 1.2em;
+    border-radius: 15px;
+}
+
+#link{
+    text-align: center;
+    display: block;
+    font-size: .8em;
+    word-wrap: break-word;
+}
+
+#link a{
+    color: rgb(96, 191, 255);
+    text-decoration: none;
+}
+
+#link a:hover{
+    color: rgb(163, 218, 255);
+}
+
+#link a:focus{
+    color: rgb(163, 218, 255);
+}
+
+#link a:active{
+    color: rgb(163, 218, 255);
+}
+
+.modal-content, #caption, #Pics, #leftButton, #rightButton {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.close {
+    position: absolute;
+    top: 1%;
+    right: 5%;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover, .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#contentArea {
+    position: relative;
+    margin-left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+}
+
+.button {
+    cursor: pointer;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 50px;
+    padding: 5px 9px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    font-size: 9.5pt;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+    font-family: sans-serif;
+    text-decoration: none;
+    margin: 10px;
+    background-color: white;
+    width: 2%;
+}
+
+.button:hover {
+    border-color: black;
+}
+
+.button:active {
+    box-shadow: 0 0 6px rgba(0, 0, 0, .6);
+    border-color: black;
+}
+
+.button:focus {
+    outline: 0;
+}
+
+/*Styles for about me section*/
+
+#about {
+    background-color: rgb(106, 119, 124);
+    color: rgb(255, 255, 255);
+    font-weight: lighter;
+    position: absolute;
+}
+
+#aboutTitle {
+    margin: auto;
+    width: 50%;
+    text-align: left;
+    font-size: 1.8em;
+    font-weight: lighter;
+    margin-top: 10%;
+}
+
+#about p {
+    margin-left: 15%;
+    width: 70%;
+    text-align: left;
+    font-size: 1.1em;
+    left: 5%;
+}
+
+#selfie {
+    max-width: 20%;
+    min-width: 250px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: solid 2px rgb(96, 191, 255);
+    margin-left: 20%;
+    float: left;
+    margin-right: 4%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+/*Styles for contact section*/
+
+#contact {
+    text-align: center;
+    font-size: 1em;
+    font-weight: lighter;
+    clear: both;
+}
+
+#phone {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#emailAddress {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#contactIcons {
+    display: flex;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+    min-width: 200px;;
+    margin-top: 2%;
+}
+
+#contactIcons img {
+    width: 50px;
+    cursor: pointer;
+    transition: opacity .1s linear;
+}
+
+#contactIcons img:hover {
+    opacity: 80%;
+}
+
+#source {
+    font-size: .8em;
+    margin-top: 5%;
+    margin-bottom: 1%;
+    text-align: center;
+}
+
+#source a {
+    text-decoration: none;
+    color: rgb(185, 185, 185);
+}
+
+#source a:hover {
+    text-decoration: underline;
+    color: rgb(230, 230, 230);
+}
+
+#source a:active {
+    text-decoration: underline;
+    color: rgb(230, 230, 230);
+}
+
+/*Styles for tooltip hover on icons*/
+
+#contactIcons div {
+    position: relative;
+}
+
+#emailTooltip {
+    opacity: 0;
+    width: 80px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    transition: opacity .1s linear;
+    top: 100%;
+    left: 50%;
+    margin-left: -40px;
+}
+
+#email:hover+#emailTooltip {
+    opacity: .8;
+}
+
+#linkedinTooltip {
+    opacity: 0;
+    width: 80px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    transition: opacity .1s linear;
+    top: 110%;
+    left: 50%;
+    margin-left: -40px;
+}
+
+#linkedin:hover+#linkedinTooltip {
+    opacity: .8;
+}
+
+#handshakeTooltip {
+    opacity: 0;
+    width: 100px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    transition: opacity .1s linear;
+    top: 100%;
+    left: 50%;
+    margin-left: -50px;
+}
+
+#handshake:hover+#handshakeTooltip {
+    opacity: .8;
+}
+
+/*Styles for PHP form*/
+/*#phpContact {
+    font-size:100%;
+    width: 80%;
+    min-width: 500px;
+    margin: auto;
+    margin-top: 3%;
+    font-family:Georgia, "Times New Roman", Times, serif;
+    height: 85%;
+}
+
+#phpContact h1{
+    background-color:rgb(106, 119, 124);
+    color:white;
+    text-align:center;
+    padding:0 0 5px 0;
+    font-variant: small-caps;
+    font-size: 3em;
+    font-family: Arial,Helvetica;
+    margin:0;
+}
+
+form {
+    width:459px;
+    margin:0 auto;
+}
+
+form label {
+    display:block;
+    margin-top:20px;
+    letter-spacing:2px;
+}
+
+input, textarea {
+    width:439px;
+    height:27px;
+    background:#efefef;
+    border-radius:5px;
+    border:1px solid #dedede;
+    padding:10px;
+    margin-top:3px;
+    font-size:0.9em;
+    color:#3a3a3a;
+}
+
+textarea {
+    height:213px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#submit {
+    width:127px;
+    height:38px;
+    border:none;
+    margin-top:20px;
+    cursor:pointer;
+    border: 1px solid gray;
+    background-color:gray;
+    color:white;
+}
+
+#phpContact {
+    animation-name: zoomFull;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoomFull {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}*/
